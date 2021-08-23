@@ -39,15 +39,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### SwiftPackageManager ###
-Packages
-.build/
-xcuserdata
-DerivedData/
-*.xcodeproj
-
-
-### SwiftPM ###
-
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,cocoapods,swiftpackagemanager,swiftpm
