@@ -17,9 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let tabBarController = UITabBarController()
+        
+        //SplitViewController for BookingTableViewController & BookingDetailViewController for detail
+        let bookingSplitViewController = UISplitViewController()
+        bookingSplitViewController.viewControllers = [BookingTableViewController(), BookingDetailViewController(booking: nil)]
+        
         tabBarController.viewControllers = [
             HomeViewController(),
-            UINavigationController(rootViewController: BookingTableViewController()),
+            bookingSplitViewController,
             SettingViewController()
         ]
 
