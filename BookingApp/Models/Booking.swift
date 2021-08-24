@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Booking {
+struct Booking: Codable {
     var user: User
     var status: BookingStatus = .waiting
     
@@ -18,7 +18,7 @@ class Booking {
     }
 }
 
-enum BookingStatus: String {
+enum BookingStatus: String, Codable {
     case waiting
     case cancel
     case confirmed

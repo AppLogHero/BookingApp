@@ -12,6 +12,7 @@
 		0AA85FD826D51ADF004CBB0A /* URLRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */; };
 		0AA85FDA26D51F3D004CBB0A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD926D51F3D004CBB0A /* Logging.swift */; };
 		0AA85FDD26D52D90004CBB0A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FDC26D52D90004CBB0A /* Threading.swift */; };
+		0AA85FE026D530B1004CBB0A /* BookingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FDF26D530B1004CBB0A /* BookingRepository.swift */; };
 		7A8BFF13212C6CBD002D27B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8BFF12212C6CBD002D27B0 /* AppDelegate.swift */; };
 		7A8BFF15212C6CBD002D27B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8BFF14212C6CBD002D27B0 /* HomeViewController.swift */; };
 		7A8BFF1A212C6CBF002D27B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BFF19212C6CBF002D27B0 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestWrapper.swift; sourceTree = "<group>"; };
 		0AA85FD926D51F3D004CBB0A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		0AA85FDC26D52D90004CBB0A /* Threading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		0AA85FDF26D530B1004CBB0A /* BookingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingRepository.swift; sourceTree = "<group>"; };
 		7A8BFF0F212C6CBD002D27B0 /* BookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8BFF12212C6CBD002D27B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8BFF14212C6CBD002D27B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 				0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */,
 			);
 			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		0AA85FDE26D53093004CBB0A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0AA85FDF26D530B1004CBB0A /* BookingRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		7A8BFF06212C6CBD002D27B0 = {
@@ -183,6 +193,7 @@
 		7A8BFF41212C6CF5002D27B0 /* Bookings */ = {
 			isa = PBXGroup;
 			children = (
+				0AA85FDE26D53093004CBB0A /* Repositories */,
 				7A8BFF43212C6E7E002D27B0 /* BookingTableViewController.swift */,
 				7A8BFF4D212C77F0002D27B0 /* BookingDetailViewController.swift */,
 				7A8BFF4F212C7ADC002D27B0 /* BookingStatusViewController.swift */,
@@ -358,6 +369,7 @@
 				0AA85FD826D51ADF004CBB0A /* URLRequestWrapper.swift in Sources */,
 				7A8BFF13212C6CBD002D27B0 /* AppDelegate.swift in Sources */,
 				7A8BFF4C212C75F8002D27B0 /* Client.swift in Sources */,
+				0AA85FE026D530B1004CBB0A /* BookingRepository.swift in Sources */,
 				0AA85FD326D4143D004CBB0A /* HTTPService.swift in Sources */,
 				0AA85FD626D51976004CBB0A /* URLWrapper.swift in Sources */,
 				7A95E9272640244400A3E824 /* User.swift in Sources */,
@@ -531,8 +543,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NZ2WUY2FY;
 				INFOPLIST_FILE = BookingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,8 +563,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NZ2WUY2FY;
 				INFOPLIST_FILE = BookingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

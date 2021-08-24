@@ -13,8 +13,8 @@ import Foundation
     let stringValue: String
     
     var wrappedValue: URL? {
-        didSet {
-            wrappedValue = URL(string: stringValue)
+        get {
+            return URL(string: stringValue)
         }
     }
     

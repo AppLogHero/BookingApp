@@ -19,6 +19,8 @@ class BookingTableViewController: UITableViewController {
         self.view.backgroundColor = .blue
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         
+      let _ = BookingDataRepository(httpService: HTTPService()).getBookings(25)
+        
         self.bookings = client.getBookings(25)
     }
     

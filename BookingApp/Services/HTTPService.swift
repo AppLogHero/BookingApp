@@ -64,10 +64,11 @@ struct HTTPService {
         task.resume()
         semaphore.wait()
         
-        if(errorResult != nil){
-            throw errorResult!
+        if let errorResult = errorResult {
+            throw errorResult
+        } else {
+            return responseResult
         }
-        return responseResult
         
     }
 

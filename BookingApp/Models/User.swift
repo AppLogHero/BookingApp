@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     var firstName: String = "John"
     var lastName: String = "Doe"
     var gender: Gender = .male
@@ -16,7 +16,7 @@ struct User {
     var phone: String?
 }
 
-enum Gender: String {
+enum Gender: String, Codable {
     case male
     case female
 }

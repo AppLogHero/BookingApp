@@ -25,8 +25,7 @@ enum HTTPMethod: String {
     var jsonData: Data? = nil
     
     var wrappedValue: URLRequest? {
-        didSet {
-            
+        get {
             var configuredURL = URLComponents(url: baseURL.appendingPathComponent(verb), resolvingAgainstBaseURL: false)
             configuredURL?.queryItems = parameters?.compactMap({ (name, value) in
                 return URLQueryItem(name: name, value: value)
@@ -34,7 +33,7 @@ enum HTTPMethod: String {
             
             guard let url = configuredURL?.url else {
                 Logging.error("Error fetch configured URL for URLRequestBuilder")
-                return
+                return nil
             }
             
             var request = URLRequest(url: url)
@@ -42,7 +41,7 @@ enum HTTPMethod: String {
             request.httpMethod  = httpMethod.rawValue
             request.httpBody = jsonData
             
-            wrappedValue = request
+            return request
         }
     }
     
