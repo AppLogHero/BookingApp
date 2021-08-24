@@ -17,7 +17,6 @@ class BookingTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .blue
-        self.title = "Booking"
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
         
         self.bookings = client.getBookings(25)

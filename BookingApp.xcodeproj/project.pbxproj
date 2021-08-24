@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA85FD326D4143D004CBB0A /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD226D4143D004CBB0A /* HTTPService.swift */; };
+		0AA85FD626D51976004CBB0A /* URLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD526D51976004CBB0A /* URLWrapper.swift */; };
+		0AA85FD826D51ADF004CBB0A /* URLRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */; };
+		0AA85FDA26D51F3D004CBB0A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FD926D51F3D004CBB0A /* Logging.swift */; };
+		0AA85FDD26D52D90004CBB0A /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA85FDC26D52D90004CBB0A /* Threading.swift */; };
 		7A8BFF13212C6CBD002D27B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8BFF12212C6CBD002D27B0 /* AppDelegate.swift */; };
 		7A8BFF15212C6CBD002D27B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8BFF14212C6CBD002D27B0 /* HomeViewController.swift */; };
 		7A8BFF1A212C6CBF002D27B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8BFF19212C6CBF002D27B0 /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AA85FD226D4143D004CBB0A /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
+		0AA85FD526D51976004CBB0A /* URLWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLWrapper.swift; sourceTree = "<group>"; };
+		0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestWrapper.swift; sourceTree = "<group>"; };
+		0AA85FD926D51F3D004CBB0A /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		0AA85FDC26D52D90004CBB0A /* Threading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 		7A8BFF0F212C6CBD002D27B0 /* BookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8BFF12212C6CBD002D27B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8BFF14212C6CBD002D27B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +98,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AA85FD426D51937004CBB0A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0AA85FDC26D52D90004CBB0A /* Threading.swift */,
+				0AA85FD926D51F3D004CBB0A /* Logging.swift */,
+				0AA85FDB26D51F49004CBB0A /* Wrappers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0AA85FDB26D51F49004CBB0A /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				0AA85FD526D51976004CBB0A /* URLWrapper.swift */,
+				0AA85FD726D51ADF004CBB0A /* URLRequestWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
 		7A8BFF06212C6CBD002D27B0 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +140,7 @@
 		7A8BFF11212C6CBD002D27B0 /* BookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AA85FD426D51937004CBB0A /* Utils */,
 				7A8BFF48212C755E002D27B0 /* Models */,
 				7A8BFF47212C7556002D27B0 /* Services */,
 				7A8BFF42212C6CFB002D27B0 /* Home */,
@@ -173,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8BFF4B212C75F8002D27B0 /* Client.swift */,
+				0AA85FD226D4143D004CBB0A /* HTTPService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -321,13 +352,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8BFF51212C7ADC002D27B0 /* BookingStatusViewController.swift in Sources */,
+				0AA85FDA26D51F3D004CBB0A /* Logging.swift in Sources */,
 				7A8BFF4E212C77F0002D27B0 /* BookingDetailViewController.swift in Sources */,
 				7A8BFF15212C6CBD002D27B0 /* HomeViewController.swift in Sources */,
+				0AA85FD826D51ADF004CBB0A /* URLRequestWrapper.swift in Sources */,
 				7A8BFF13212C6CBD002D27B0 /* AppDelegate.swift in Sources */,
 				7A8BFF4C212C75F8002D27B0 /* Client.swift in Sources */,
+				0AA85FD326D4143D004CBB0A /* HTTPService.swift in Sources */,
+				0AA85FD626D51976004CBB0A /* URLWrapper.swift in Sources */,
 				7A95E9272640244400A3E824 /* User.swift in Sources */,
 				7A8BFF44212C6E7E002D27B0 /* BookingTableViewController.swift in Sources */,
 				7A8BFF46212C6E97002D27B0 /* SettingsViewController.swift in Sources */,
+				0AA85FDD26D52D90004CBB0A /* Threading.swift in Sources */,
 				7A8BFF4A212C756D002D27B0 /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

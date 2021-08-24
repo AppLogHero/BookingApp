@@ -18,15 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarController = UITabBarController()
         
+        let homeItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+        let bookingItem = UITabBarItem(title: "Booking", image: UIImage(named: "booking"), selectedImage: UIImage(named: "booking"))
+        let settingsItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings"), selectedImage: UIImage(named: "settings"))
+        
+        let homeViewController = HomeViewController()
+        homeViewController.tabBarItem = homeItem
+        
         //SplitViewController for BookingTableViewController & BookingDetailViewController for detail
         let bookingSplitViewController = UISplitViewController()
+        bookingSplitViewController.tabBarItem = bookingItem
         bookingSplitViewController.viewControllers = [BookingTableViewController(), BookingDetailViewController(booking: nil)]
         
-        tabBarController.viewControllers = [
-            HomeViewController(),
-            bookingSplitViewController,
-            SettingViewController()
-        ]
+        let settingsViewController = SettingViewController()
+        settingsViewController.tabBarItem = settingsItem
+        
+        tabBarController.viewControllers = [homeViewController, bookingSplitViewController, settingsViewController]
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window!.makeKeyAndVisible()

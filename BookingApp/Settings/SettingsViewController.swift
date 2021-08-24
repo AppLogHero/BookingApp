@@ -14,6 +14,5 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .green
-        self.title = "Setting"
     }
 }
